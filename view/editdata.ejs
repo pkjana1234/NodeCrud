@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>NODEJS</title>
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-xl-5 mx-auto">
+                <form action="/updatesingleuser/<%= data._id%>" method="post" class="p-5" style="border: 2px solid #777; border-radius: 10px;">
+                    <h3 class="text-center pb-3">UPDATE YOUR DATA</h3>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" value= "<%= data.name %>" class="form-control" name="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">EMAIL ID</label>
+                        <input type="email" value= "<%= data.email %>" class="form-control" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="city" class="form-label">CITY</label>
+                        <input type="text" value= "<%= data.city %>" class="form-control" name="city">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">PHONE</label>
+                        <input type="text" value= "<%= data.phone %>" class="form-control" name="phone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="area" class="form-label">AREA</label>
+                        <input type="text" value= "<%= data.area %>" class="form-control" name="area">
+                    </div>
+                    <button type="submit" class="btn btn-warning form-control">UPDATE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
